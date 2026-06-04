@@ -1,29 +1,39 @@
-User Manual
+# ICRO Image Enhancement Framework
 
-========================================
+A deep learning-based image enhancement framework designed to improve low-quality images and generate enhanced outputs with corresponding image quality metrics.
 
-1. OVERVIEW
-   ========================================
+---
 
-The framework is designed to enhance low-quality images using a deep learning-based image enhancement pipeline. The framework processes user-selected images and generates enhanced output images with metrics scores.
+## Overview
 
-========================================
-2. SYSTEM REQUIREMENTS
-======================
-Hardware:
-* At least 8GB RAM
-* Dedicated GPU with at least 4GB VRAM
+The ICRO Image Enhancement Framework processes user-selected images through an image enhancement pipeline and produces:
 
-Operating System:
+* Enhanced image outputs
+* Image quality metrics
+* Visual comparison results
 
-* Windows 10 or Windows 11
+---
 
-Required Software:
+## System Requirements
+
+### Hardware
+
+| Component | Requirement                           |
+| --------- | ------------------------------------- |
+| RAM       | Minimum 8 GB                          |
+| GPU       | Dedicated GPU with at least 4 GB VRAM |
+
+### Operating System
+
+* Windows 10
+* Windows 11
+
+### Software
 
 * Python 3.10 or newer
 * Pip Package Manager
 
-Required Libraries:
+### Required Libraries
 
 * numpy
 * pandas
@@ -37,130 +47,177 @@ Required Libraries:
 * ultralytics
 * thop
 
-========================================
-3. INSTALLATION
-===============
+---
 
-Step 1:
-Open Command Prompt.
+## Installation
 
-Step 2:
-Navigate to the project directory.
+### Step 1: Open Command Prompt
+
+Press **Win + R**, type:
+
+```bash
+cmd
+```
+
+and press **Enter**.
+
+### Step 2: Navigate to the Project Directory
 
 Example:
 
+```bash
 cd C:\Users\Admin\Documents\ICRO_Project
+```
 
-Step 3:
-Install all required libraries.
+### Step 3: Install Required Libraries
 
+```bash
 pip install numpy pandas opencv-python torch torchvision pillow matplotlib scikit-image lpips ultralytics thop
+```
 
-========================================
-4. PROJECT FILES
-================
+---
 
-Ensure the following files are present:
+## Project Structure
 
-ICRO_Project
+```text
+ICRO_Project/
 │
 ├── ICRO.ipynb
 ├── frcnnval.ipynb
-├── checkpoints
+├── checkpoints/
 │   └── best_model.pth
-├── weights
+├── weights/
 │   └── best.pt
-├── input_images
-└── output_images
+├── input_images/
+└── output_images/
+```
 
-Note:
-The trained model files must remain in their designated folders. Moving or renaming these files may cause the system to fail.
+> **Important:**
+> The trained model files must remain in their designated folders. Moving, renaming, or deleting these files may cause the framework to fail.
 
-========================================
-5. RUNNING IT
-=====================
+---
 
-Method 1: Jupyter Notebook
+## Running the Framework
+
+### Method 1: Jupyter Notebook
 
 1. Open Command Prompt.
 2. Navigate to the project folder.
+
+```bash
+cd C:\Users\Admin\Documents\ICRO_Project
+```
+
 3. Launch Jupyter Notebook.
 
+```bash
 jupyter notebook
+```
 
-4. Open ICRO.ipynb.
-5. Execute all notebook cells from top to bottom.
-6. When prompted, select the image(s) for enhancement.
-7. Wait for processing to complete.
-8. Enhanced images will be saved automatically.
+4. Open `ICRO.ipynb`.
+5. Run all notebook cells from top to bottom.
+6. Select the image(s) when prompted.
+7. Wait for processing to finish.
+8. Enhanced outputs will be generated automatically.
 
-========================================
-6. USING THE SYSTEM
-===================
+---
 
-Step 1:
+## Using the Framework
+
+### Step 1
+
 Prepare the image(s) to be enhanced.
 
-Step 2:
-File expolorer will pop up, choose the image to be processed.
+### Step 2
 
-Step 3:
-Click Upload on the file explorer.
+A file explorer window will appear.
 
-Step 4:
-Wait until processing is completed.
+Select the image to be processed.
 
-Step 5:
-View the enhanced images/outputs in the output folder.
+### Step 3
 
-========================================
-7. OUTPUT
-=========
+Click **Upload**.
 
-The system generates:
+### Step 4
+
+Wait for the enhancement process to complete.
+
+### Step 5
+
+View the generated outputs inside the `output_images` folder.
+
+---
+
+## Output
+
+The framework generates:
 
 * Enhanced image files
 * Performance metrics
 * Visual comparison results
 
-Output files are stored in the designated output directory.
+All outputs are saved automatically in the designated output directory.
 
-========================================
-8. TROUBLESHOOTING
-==================
+---
 
-Problem:
-ModuleNotFoundError
+## Troubleshooting
 
-Solution:
-Install missing packages using:
+### ModuleNotFoundError
 
+**Cause:** Missing Python package.
+
+**Solution:**
+
+```bash
 pip install <package_name>
+```
 
-Problem:
-Model file not found
+---
 
-Solution:
-Verify that all .pth and .pt files are present in their correct folders.
+### Model File Not Found
 
-Problem:
-Program closes unexpectedly
+**Cause:** Missing or misplaced model files.
 
-Solution:
-Check the Command Prompt window for error messages and verify all dependencies are installed.
+**Solution:**
 
-Problem:
-CUDA or GPU error
+Verify that all `.pth` and `.pt` files are present in their correct directories.
 
-Solution:
-Run the system using CPU mode or install the correct version of PyTorch for your GPU.
+---
 
-========================================
-9. AUTHORS
-==========
+### Program Closes Unexpectedly
+
+**Cause:** Runtime error or missing dependency.
+
+**Solution:**
+
+* Check the Command Prompt output for error messages.
+* Verify that all required libraries are installed.
+
+---
+
+### CUDA or GPU Error
+
+**Cause:** GPU driver, CUDA, or PyTorch compatibility issue.
+
+**Solution:**
+
+* Run the framework using CPU mode.
+* Install the appropriate version of PyTorch compatible with your CUDA version.
+
+---
+
+## Authors
 
 Developed as part of an undergraduate thesis project.
 
-Agres,Zyrach Adrian A.
-Guernaldo, Mardyson Justin D.
-Lejano, Nathaniel O.
+**Researchers**
+
+* Agres, Zyrach Adrian A.
+* Guernaldo, Mardyson Justin D.
+* Lejano, Nathaniel O.
+
+---
+
+## License
+
+This project is intended for academic and research purposes.
