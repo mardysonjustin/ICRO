@@ -71,10 +71,7 @@ cd C:\Users\Admin\Documents\ICRO_Project
 
 ### Step 3: Install Required Libraries
 
-```bash
-pip install numpy pandas opencv-python torch torchvision pillow matplotlib scikit-image lpips ultralytics thop
-```
-
+Run the install_packages.exe file to install all the necessary libraries and packages.
 ---
 
 ## Project Structure
