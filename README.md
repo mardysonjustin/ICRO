@@ -69,9 +69,12 @@ Example:
 cd C:\Users\Admin\Documents\ICRO_Project
 ```
 
-### Step 3: Install Required Libraries
+### Step 3: Install Required Libraries and Models
 
 Run the install_packages.exe file to install all the necessary libraries and packages.
+
+Install the SRNO and YOLO trained models in the following link: https://drive.google.com/drive/folders/1YI9Itu3Yr0ajp7CN-J3tzFnnPjqJsG1R?usp=drive_link
+
 ---
 
 ## Project Structure
@@ -82,9 +85,9 @@ ICRO_Project/
 ├── ICRO.ipynb
 ├── frcnnval.ipynb
 ├── checkpoints/
-│   └── best_model.pth
+│   └── srno_best_model.pth
 ├── weights/
-│   └── best.pt
+│   └── yolo_best.pt
 ├── input_images/
 └── output_images/
 ```
